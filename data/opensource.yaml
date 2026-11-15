@@ -4,10 +4,10 @@ section:
   kind: "Maintainer"
   title: "Argo CD and open source"
   summary: "mTLS in Argo CD 3.5, release champion for 3.5, a rollback permission, and a few projects of my own"
-  state: "approver, cli and docs"
+  state: "maintainer"
 intro_html: >-
-  Argo CD is the GitOps continuous delivery tool for Kubernetes and a CNCF project. I'm a member of
-  the Argo Project and an approver for the Argo CD CLI and docs, as you can see in the
+  Argo CD is the GitOps continuous delivery tool for Kubernetes and a CNCF project. I'm an
+  Argo CD maintainer, as you can see in the
   <a href="https://github.com/argoproj/argoproj/blob/main/MAINTAINERS.md">Argo maintainers list</a>.
   Working on it is my day job at Octopus Deploy, where I'm also part of the team that gives
   enterprise support for Argo.
