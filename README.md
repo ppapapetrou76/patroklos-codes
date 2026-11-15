@@ -60,6 +60,13 @@ The `Update data` workflow runs once a day and runs `scripts/update_data.py`, wh
 If a source cannot be reached the old file is kept. When something changed, the workflow commits
 it, and Cloudflare rebuilds the site because of the push.
 
+## Checks
+
+- `CI` runs on every pull request and push. It builds the site and fails on any warning, lints the
+  workflows and compiles the update script.
+- `Check links` runs every Monday. It checks every link on the built page and opens an issue, or
+  comments on the open one, when something is dead.
+
 ## Hosting
 
 The site is a Cloudflare Workers project connected to this repository. `wrangler.jsonc` tells it to serve the `public` folder. The build settings are:

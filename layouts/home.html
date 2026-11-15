@@ -9,6 +9,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800&family=Red+Hat+Text:wght@400;500;600;700&family=Red+Hat+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+<link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">
 <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
 </head>
 <body>
@@ -83,7 +86,7 @@
       <p>{{ $d.intro }}</p>
       <div class="rows">
         {{- range $d.items }}
-        <div class="row"><span class="y">{{ .year }}</span><span class="t">{{ .title }}<span class="e">{{ .event }}</span>{{ with .tags }}<span class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</span>{{ end }}</span>{{ if .link }}<span class="l"><a href="{{ .link }}">{{ .link_label | default "Link" }}</a></span>{{ end }}</div>
+        <div class="row"><span class="y">{{ .year }}</span><span class="t">{{ .title }}<span class="e">{{ .event }}</span>{{ with .tags }}<span class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</span>{{ end }}</span>{{ if or .video .link }}<span class="l">{{ if .video }}<a href="{{ .video }}">{{ .video_label | default "Watch the talk" }}</a>{{ end }}{{ if .link }}<a href="{{ .link }}">{{ .link_label | default "Link" }}</a>{{ end }}</span>{{ end }}</div>
         {{- end }}
       </div>
       {{ with $d.outro_html }}<p class="muted">{{ . | safeHTML }}</p>{{ end }}

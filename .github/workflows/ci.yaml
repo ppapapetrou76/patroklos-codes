@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+env:
+  HUGO_VERSION: 0.170.0
+
+jobs:
+  build:
+    name: Build the site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Hugo
+        run: |
+          curl -sSLo "${RUNNER_TEMP}/hugo.deb" \
+            "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux-amd64.deb"
+          sudo dpkg -i "${RUNNER_TEMP}/hugo.deb"
+      - name: Check out the repository
+        uses: actions/checkout@v7
+      # A warning usually means a typo in a data file or a field the template cannot find.
+      - name: Build and fail on warnings
+        run: hugo build --gc --minify --panicOnWarning
+
+  lint:
+    name: Lint workflows and scripts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v7
+      - name: Lint the workflows
+        run: docker run --rm -v "${PWD}:/repo" -w /repo rhysd/actionlint:latest -color
+      - name: Compile the update script
+        run: python3 -m py_compile scripts/update_data.py
