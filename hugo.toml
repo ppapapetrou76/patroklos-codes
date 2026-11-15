@@ -1,4 +1,4 @@
-baseURL = "https://ppapapetrou76.github.io/"
+baseURL = "https://patroklos.codes/"
 locale = "en"
 title = "Patroklos (Pat) Papapetrou"
 disableKinds = ["taxonomy", "term", "RSS", "section", "page"]

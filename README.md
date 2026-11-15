@@ -1,7 +1,7 @@
 # pat-papapetrou
 
-My personal site. It is one page built with [Hugo](https://gohugo.io) from the data files in
-`data/`, and GitHub Actions publishes it to GitHub Pages on every push to `main`.
+My personal site at https://patroklos.codes. It is one page built with [Hugo](https://gohugo.io)
+from the data files in `data/`, and Cloudflare Pages builds and publishes it on every push to `main`.
 
 ## Run it locally
 
@@ -58,12 +58,17 @@ The `Update data` workflow runs once a day and runs `scripts/update_data.py`, wh
   the highlights, and the highlights themselves stay hand-picked in `data/opensource.yaml`.
 
 If a source cannot be reached the old file is kept. When something changed, the workflow commits
-it and the site is rebuilt.
+it, and Cloudflare rebuilds the site because of the push.
 
-## First-time setup on GitHub
+## Hosting
 
-1. Push this repository to GitHub.
-2. In Settings, Pages, set Source to GitHub Actions.
-3. In Settings, Actions, General, allow workflows to read and write, so the daily update can commit.
+The site is a Cloudflare Pages project connected to this repository. The build settings are:
 
-For a custom domain, add it in Settings, Pages and add a `static/CNAME` file with the domain in it.
+| Setting | Value |
+|---|---|
+| Build command | `hugo build --gc --minify` |
+| Build output directory | `public` |
+| Environment variable | `HUGO_VERSION` = `0.170.0` |
+
+The daily update needs to commit, so in Settings, Actions, General, workflows are allowed to read
+and write.
