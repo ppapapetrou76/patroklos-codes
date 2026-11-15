@@ -30,6 +30,16 @@ items:
     link: "https://2026.platformcon.com/sessions/level-up-your-gitops-deployments-with-argo-cd-and-argo-rollouts"
     video: "https://www.youtube.com/watch?v=UqniBV8lZO8"
     video_label: "Watch the workshop"
+  - year: 2021
+    title: "The top 10+1 essential (soft) skills for every developer"
+    event: "Ahead of Tech"
+    tags: [soft-skills]
+    video: "https://www.youtube.com/watch?v=lqc733GvWE8"
+  - year: 2019
+    title: "Being agile in a 1000+ employee distributed company"
+    event: "Voxxed Days Milan"
+    tags: [agile, remote-teams]
+    video: "https://www.youtube.com/watch?v=P_P-Yy_CHf4"
   - year: 2018
     title: "Beyond Clean Code and Code Quality"
     event: "DevExperience"
@@ -76,6 +86,28 @@ items:
     link_label: "Slides"
     link: "https://speakerdeck.com/ppapapetrou76/managing-global-teams-at-swancon-2015"
     video: "https://www.youtube.com/watch?v=xkbSQnQq1z8"
+  - year: 2015
+    title: "The Art of Software Gardening"
+    event: "JDays"
+    tags: [software-gardening, code-quality]
+    video: "https://www.youtube.com/watch?v=MHmkNjeutao"
+  - year: 2015
+    title: "10 or so tips to increase your productivity"
+    event: "JDays"
+    tags: [productivity]
+    video: "https://www.youtube.com/watch?v=722Uyq1sVjw"
+  - year: 2014
+    title: "Help, my code quality is not manageable"
+    event: "Coding Serbia"
+    tags: [code-quality, sonarqube]
+    video: "https://www.youtube.com/watch?v=fVYqlqsLzLU"
+  - year: 2014
+    title: "Holding down your Technical Debt with SonarQube"
+    event: "JEEConf"
+    tags: [code-quality, sonarqube]
+    link_label: "Slides"
+    link: "https://speakerdeck.com/ppapapetrou76/holding-down-your-technical-debt-with-sonarqube"
+    video: "https://www.youtube.com/watch?v=mNkWExwavKw"
   - year: 2013
     title: "Tracking and Improving Software Quality with Sonar"
     event: "Øredev, Malmö, together with Mastering Continuous Inspection with Sonar"
