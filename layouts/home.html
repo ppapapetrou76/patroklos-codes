@@ -86,7 +86,7 @@
       <p>{{ $d.intro }}</p>
       <div class="rows">
         {{- range $d.items }}
-        <div class="row"><span class="y">{{ .year }}</span><span class="t">{{ .title }}<span class="e">{{ .event }}</span>{{ with .tags }}<span class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</span>{{ end }}</span>{{ if .link }}<span class="l"><a href="{{ .link }}">{{ .link_label | default "Link" }}</a></span>{{ end }}</div>
+        <div class="row"><span class="y">{{ .year }}</span><span class="t">{{ .title }}<span class="e">{{ .event }}</span>{{ with .tags }}<span class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</span>{{ end }}</span>{{ if or .video .link }}<span class="l">{{ if .video }}<a href="{{ .video }}">{{ .video_label | default "Watch the talk" }}</a>{{ end }}{{ if .link }}<a href="{{ .link }}">{{ .link_label | default "Link" }}</a>{{ end }}</span>{{ end }}</div>
         {{- end }}
       </div>
       {{ with $d.outro_html }}<p class="muted">{{ . | safeHTML }}</p>{{ end }}

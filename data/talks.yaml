@@ -1,4 +1,5 @@
 # Talks and workshops, newest first. To add one, copy an entry and put it at the top of "items".
+# "video" is the recording (YouTube or Vimeo) and is optional. "video_label" changes its link text.
 section:
   kind: "Speaker"
   title: "Talks and workshops"
@@ -27,6 +28,8 @@ items:
     tags: [gitops, progressive-delivery]
     link_label: "Session page"
     link: "https://2026.platformcon.com/sessions/level-up-your-gitops-deployments-with-argo-cd-and-argo-rollouts"
+    video: "https://www.youtube.com/watch?v=UqniBV8lZO8"
+    video_label: "Watch the workshop"
   - year: 2018
     title: "Beyond Clean Code and Code Quality"
     event: "DevExperience"
@@ -51,24 +54,28 @@ items:
     tags: [code-reviews]
     link_label: "Slides"
     link: "https://speakerdeck.com/ppapapetrou76/things-i-learned-after-doing-2400-code-reviews-in-6-months"
+    video: "https://www.youtube.com/watch?v=kx1haUujfEs"
   - year: 2016
     title: "Managing Global Teams: Lessons Learned"
     event: "JDays"
     tags: [remote-teams]
     link_label: "Slides"
     link: "https://speakerdeck.com/ppapapetrou76/managing-global-teams-lessons-learned"
+    video: "https://www.youtube.com/watch?v=fxzP7A3SLbo"
   - year: 2015
     title: "The Art of Software Gardening"
     event: "DevTernity, Riga"
     tags: [software-gardening, code-quality]
-    link_label: "Watch a recording"
-    link: "https://www.youtube.com/watch?v=MHmkNjeutao"
+    link_label: "Slides"
+    link: "https://speakerdeck.com/ppapapetrou76/the-art-of-software-gardening"
+    video: "https://www.youtube.com/watch?v=zz4uIb41Mbc"
   - year: 2015
     title: "Managing Global Teams"
     event: "SwanseaCon"
     tags: [remote-teams]
     link_label: "Slides"
     link: "https://speakerdeck.com/ppapapetrou76/managing-global-teams-at-swancon-2015"
+    video: "https://www.youtube.com/watch?v=xkbSQnQq1z8"
   - year: 2013
     title: "Tracking and Improving Software Quality with Sonar"
     event: "Øredev, Malmö, together with Mastering Continuous Inspection with Sonar"
