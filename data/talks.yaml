@@ -1,0 +1,77 @@
+# Talks and workshops, newest first. To add one, copy an entry and put it at the top of "items".
+section:
+  kind: "Speaker"
+  title: "Talks and workshops"
+  summary: "GitOps, Argo CD, code quality and remote teams, at ArgoCon, PlatformCon, DevTernity and more"
+  state: "since 2013"
+  open: true
+intro: >-
+  I started speaking at conferences around 2013. These days I mostly talk about GitOps, Argo CD and
+  continuous delivery, and I still enjoy a session on code quality, code reviews or remote teams.
+  I do talks, hands-on workshops and panels, and I've been on the other side of the call for papers
+  for ten years, so I know what an organizer needs from a speaker.
+outro_html: >-
+  I've also spoken at I T.A.K.E. Unconference in Bucharest and many local meetups.
+  <a href="https://sessionize.com/pat/">My Sessionize profile</a> and
+  <a href="https://speakerdeck.com/ppapapetrou76">my slides on Speaker Deck</a> have more.
+items:
+  - year: 2026
+    title: "Securing the Repo Server: A Practical Guide to Argo CD's New Native mTLS"
+    event: "ArgoCon North America, Salt Lake City"
+    tags: [argo-cd, mtls, security]
+    link_label: "Read the write-up"
+    link: "https://octopus.com/blog/mtls-support-argocd"
+  - year: 2026
+    title: "Level up your GitOps deployments with Argo CD and Argo Rollouts"
+    event: "PlatformCon, a 90-minute hands-on workshop with Kostis Kapelonis"
+    tags: [gitops, progressive-delivery]
+    link_label: "Session page"
+    link: "https://2026.platformcon.com/sessions/level-up-your-gitops-deployments-with-argo-cd-and-argo-rollouts"
+  - year: 2018
+    title: "Beyond Clean Code and Code Quality"
+    event: "DevExperience"
+    tags: [code-quality]
+    link_label: "Session page"
+    link: "https://2018.devexperience.ro/speakers/patroklos-papapetrou/"
+  - year: 2017
+    title: "Beyond Clean Code and Code Quality"
+    event: "Code Europe, Kraków"
+    tags: [code-quality]
+    link_label: "Slides"
+    link: "https://speakerdeck.com/ppapapetrou76/beyond-clean-code-and-code-quality"
+  - year: 2017
+    title: "3 Years of Remote Working in 30'"
+    event: "Thessaloniki Java Meetup"
+    tags: [remote-teams]
+    link_label: "Slides"
+    link: "https://speakerdeck.com/ppapapetrou76/3-years-of-remote-working-in-30"
+  - year: 2017
+    title: "Things I learned after doing 2400 code reviews in 6 months"
+    event: "Voxxed Days Bucharest"
+    tags: [code-reviews]
+    link_label: "Slides"
+    link: "https://speakerdeck.com/ppapapetrou76/things-i-learned-after-doing-2400-code-reviews-in-6-months"
+  - year: 2016
+    title: "Managing Global Teams: Lessons Learned"
+    event: "JDays"
+    tags: [remote-teams]
+    link_label: "Slides"
+    link: "https://speakerdeck.com/ppapapetrou76/managing-global-teams-lessons-learned"
+  - year: 2015
+    title: "The Art of Software Gardening"
+    event: "DevTernity, Riga"
+    tags: [software-gardening, code-quality]
+    link_label: "Watch a recording"
+    link: "https://www.youtube.com/watch?v=MHmkNjeutao"
+  - year: 2015
+    title: "Managing Global Teams"
+    event: "SwanseaCon"
+    tags: [remote-teams]
+    link_label: "Slides"
+    link: "https://speakerdeck.com/ppapapetrou76/managing-global-teams-at-swancon-2015"
+  - year: 2013
+    title: "Tracking and Improving Software Quality with Sonar"
+    event: "Øredev, Malmö, together with Mastering Continuous Inspection with Sonar"
+    tags: [code-quality, sonarqube]
+    link_label: "Speaker page"
+    link: "https://archive.oredev.org/oredev2013/2013/speakers/patroklos-papapetrou"

@@ -1,0 +1,64 @@
+# Argo CD highlights are hand-picked here. The "Recently merged" list under them is filled
+# automatically from data/auto/argocd_prs.json by scripts/update_data.py.
+section:
+  kind: "Maintainer"
+  title: "Argo CD and open source"
+  summary: "mTLS in Argo CD 3.5, release champion for 3.5, a rollback permission, and a few projects of my own"
+  state: "approver, cli and docs"
+intro_html: >-
+  Argo CD is the GitOps continuous delivery tool for Kubernetes and a CNCF project. I'm a member of
+  the Argo Project and an approver for the Argo CD CLI and docs, as you can see in the
+  <a href="https://github.com/argoproj/argoproj/blob/main/MAINTAINERS.md">Argo maintainers list</a>.
+  Working on it is my day job at Octopus Deploy, where I'm also part of the team that gives
+  enterprise support for Argo.
+highlights_html:
+  - >-
+    I proposed and implemented <a href="https://github.com/argoproj/argo-cd/pull/26715">mTLS support in the repo-server</a>
+    for Argo CD 3.5, so the other components have to prove who they are before they can talk to it.
+    It started as <a href="https://github.com/argoproj/argo-cd/issues/26684">my proposal</a> and I wrote about it on the
+    <a href="https://octopus.com/blog/mtls-support-argocd">Octopus Deploy blog</a>.
+  - >-
+    I was the <a href="https://github.com/argoproj/argo-cd/pull/26748">release champion for Argo CD 3.5</a>.
+  - >-
+    I added a <a href="https://github.com/argoproj/argo-cd/pull/28924">separate RBAC permission for application rollback</a>,
+    so you can let someone roll back without letting them sync.
+  - >-
+    Sync failures now <a href="https://github.com/argoproj/argo-cd/pull/27750">show the root cause in the message</a>,
+    and discovery errors are cached.
+  - >-
+    I fixed <a href="https://github.com/argoproj/argo-cd/pull/28092">server-side diff for Helm with Kubernetes</a>
+    in the repo-server, and two Dex regressions around
+    <a href="https://github.com/argoproj/argo-cd/pull/28027">passwords with a dollar sign</a> and
+    <a href="https://github.com/argoproj/argo-cd/pull/28369">environment variable substitution</a>.
+  - >-
+    I <a href="https://github.com/argoproj/argo-cd/pull/29633">split the end-to-end tests into shards</a> and skip them
+    for changes that cannot affect them, and I fixed a long list of flaky tests along the way.
+  - >-
+    Smaller features: <a href="https://github.com/argoproj/argo-cd/pull/25493">OCI metrics</a>, a
+    <a href="https://github.com/argoproj/argo-cd/pull/27788">native proxy-url flag for ApplicationSets</a> and a
+    <a href="https://github.com/argoproj/argo-cd/pull/28134">server-proxy-url flag for cluster add</a>.
+  - >-
+    Docs: the guide on <a href="https://github.com/argoproj/argo-cd/pull/29046">headless authentication for CI/CD pipelines</a>
+    and the <a href="https://github.com/argoproj/argo-cd/pull/30079">guide for reviewing pull requests</a>.
+  - >-
+    Every week I review pull requests from other contributors and backport fixes to the supported releases.
+recent_title: "Recently merged in Argo CD"
+projects:
+  - name: "Cost Intelligence for Argo CD"
+    url: "https://github.com/OctopusDeploy/argocd-cost-intelligence"
+    description: "An open source extension from Octopus Deploy that adds a cost tab to every Argo CD application, based on OpenCost data, so you can see what changed after a sync."
+  - name: "oss-chronicle"
+    url: "https://github.com/ppapapetrou76/oss-chronicle"
+    description: "A GitHub Action that counts the contributions behind an open source repository from its pull request data. It counts finished work and gives a reason for every event it leaves out."
+  - name: "go-data-gov-gr-sdk"
+    url: "https://github.com/ppapapetrou76/go-data-gov-gr-sdk"
+    description: "A Go SDK for the open data that the Greek government publishes on data.gov.gr."
+  - name: "virtual-assistant"
+    url: "https://github.com/ppapapetrou76/virtual-assistant"
+    description: "A GitHub Action that automates the routine tasks around issues and pull requests."
+  - name: "go-testing"
+    url: "https://github.com/ppapapetrou76/go-testing"
+    description: "A small set of developer-friendly unit testing libraries for Go."
+  - name: "Everything else"
+    url: "https://github.com/ppapapetrou76"
+    description: "The rest of my repositories and contributions are on my GitHub profile."

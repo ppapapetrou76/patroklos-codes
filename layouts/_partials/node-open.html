@@ -1,0 +1,6 @@
+{{- /* Opens one node of the resource tree. Expects: id, section (kind, title, summary, state, warn, open). */ -}}
+{{- $s := .section -}}
+<div class="branch" id="{{ .id }}">
+  <details class="node"{{ if $s.open }} open{{ end }}>
+    <summary><span class="name"><span class="kind">{{ $s.kind }}</span><h3>{{ $s.title }}</h3><span class="sum">{{ $s.summary }}</span></span><span class="state{{ if $s.warn }} warn{{ end }}">{{ $s.state }}</span></summary>
+    <div class="body">

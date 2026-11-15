@@ -1,0 +1,10 @@
+baseURL = "https://ppapapetrou76.github.io/"
+locale = "en"
+title = "Patroklos (Pat) Papapetrou"
+disableKinds = ["taxonomy", "term", "RSS", "section", "page"]
+
+[params]
+description = "Patroklos (Pat) Papapetrou: Argo CD maintainer, Lead Open Source Engineer at Octopus Deploy, organizer of Devoxx Greece and Voxxed Days, author and speaker."
+
+[caches.images]
+dir = ":cacheDir/images"

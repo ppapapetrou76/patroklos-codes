@@ -1,0 +1,22 @@
+# "warn: true" shows the status in amber (in progress) and not green.
+section:
+  kind: "Founder"
+  title: "SoftConf, rolelens.ai, ticketlens.ai"
+  summary: "The company behind the conferences, and two products in the making"
+  state: "Progressing"
+  warn: true
+intro: >-
+  SoftConf started as the company behind the conferences. It now also builds software products,
+  and I'm bootstrapping them myself.
+items:
+  - name: "SoftConf"
+    status: "Since 2016, Thessaloniki"
+    description: "Organizes Devoxx Greece and the Voxxed Days conferences in Thessaloniki, Ioannina and Crete."
+  - name: "rolelens.ai"
+    status: "Private beta"
+    warn: true
+    description: "AI talent matching for tech hiring. It reads a candidate's GitHub, CV and LinkedIn and keeps them anonymous until they choose to reveal who they are."
+  - name: "ticketlens.ai"
+    status: "Under development"
+    warn: true
+    description: "Event ticketing that is free and easy to use."

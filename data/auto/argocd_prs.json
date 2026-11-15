@@ -1,0 +1,50 @@
+[
+  {
+    "number": 30214,
+    "title": "ci: refresh e2e shard weights with a scheduled workflow (#30187)",
+    "url": "https://github.com/argoproj/argo-cd/pull/30214",
+    "merged": "2026-10-23"
+  },
+  {
+    "number": 30079,
+    "title": "docs: add a guide for reviewing PRs",
+    "url": "https://github.com/argoproj/argo-cd/pull/30079",
+    "merged": "2026-10-20"
+  },
+  {
+    "number": 30289,
+    "title": "test(cli): mask resource timestamps in waitOnApplicationStatus output tests",
+    "url": "https://github.com/argoproj/argo-cd/pull/30289",
+    "merged": "2026-10-19"
+  },
+  {
+    "number": 30239,
+    "title": "test: accept EOF while the API server restarts in TestAPIServerGracefulRestart",
+    "url": "https://github.com/argoproj/argo-cd/pull/30239",
+    "merged": "2026-10-16"
+  },
+  {
+    "number": 30238,
+    "title": "fix: restore SSH repository fetch through a SOCKS5 proxy",
+    "url": "https://github.com/argoproj/argo-cd/pull/30238",
+    "merged": "2026-10-16"
+  },
+  {
+    "number": 30186,
+    "title": "chore: refresh the e2e shard weights after the progressive sync test fix",
+    "url": "https://github.com/argoproj/argo-cd/pull/30186",
+    "merged": "2026-10-16"
+  },
+  {
+    "number": 30195,
+    "title": "fix(controller): don't overwrite a newer informer copy on write-back",
+    "url": "https://github.com/argoproj/argo-cd/pull/30195",
+    "merged": "2026-10-15"
+  },
+  {
+    "number": 30213,
+    "title": "test: wait for test CRDs to be deleted before the next e2e test starts",
+    "url": "https://github.com/argoproj/argo-cd/pull/30213",
+    "merged": "2026-10-15"
+  }
+]

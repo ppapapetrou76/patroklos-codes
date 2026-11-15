@@ -1,0 +1,22 @@
+# Episodes come from data/auto/episodes.json, which scripts/update_data.py fills from the
+# YouTube channel feed. Add an entry under "episodes" (keyed by the YouTube video id) to give
+# an episode a description or a nicer title.
+section:
+  kind: "Host"
+  title: "The Main Branch podcast"
+  summary: "The official podcast of Devoxx Greece and Voxxed Days Thessaloniki"
+  state: "on YouTube and Spotify"
+intro: >-
+  The Main Branch is the official podcast and vidcast of Devoxx Greece and Voxxed Days Thessaloniki,
+  and I host it. We sit down with people from the Greek tech community and talk about careers,
+  conferences and the local ecosystem. The episodes are in Greek.
+youtube: "https://www.youtube.com/@MainBranch_VidCast"
+spotify: "https://open.spotify.com/show/033HMtKOR9Yn8BXjsyjbra"
+episodes:
+  cmIL24wfWZc:
+    title: "From Junior to Staff/Principal Engineer in SKG"
+    description: "With Eleftherios Chrysochoidis and Konstantinos Ziazios, on what it takes to grow a tech career in Thessaloniki."
+  msjbmpkmtks:
+    description: "People from academia and industry on why Thessaloniki's tech scene is growing."
+  kE011d38KEw:
+    description: "The roles are reversed and Stavros Korokithakis interviews me about the first Voxxed Days Thessaloniki in 2016 and everything that followed."

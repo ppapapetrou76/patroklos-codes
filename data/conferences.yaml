@@ -1,0 +1,32 @@
+section:
+  kind: "CronJob, yearly"
+  title: "Devoxx Greece and Voxxed Days"
+  summary: "Developer conferences in Athens, Thessaloniki, Ioannina and Crete"
+  state: "running since 2016"
+intro: >-
+  After a couple of years of speaking abroad I kept asking why Greece didn't have a big developer
+  conference of its own. In 2016 we held the first Voxxed Days in Thessaloniki, and my company
+  SoftConf has since organized events in four cities, with speakers and attendees from all over the world.
+command: "$ pat history --conferences"
+history:
+  - year: 2014
+    text: "Started the Thessaloniki Java Meetup, which still meets as Thessaloniki Not-Only-Java"
+  - year: 2016
+    text: "First Voxxed Days Thessaloniki on 21 October, and founded SoftConf to run it"
+  - year: 2017
+    text: "Voxxed Days Athens in May, which later passed a thousand attendees"
+  - year: 2023
+    text: "The Athens event took the Devoxx name and became Devoxx Greece"
+  - year: 2024
+    text: "First Voxxed Days Ioannina, at the University of Ioannina"
+  - year: 2025
+    text: "First Voxxed Days Crete. Voxxed Days Thessaloniki welcomed about 800 people from 15 countries"
+  - year: 2026
+    text: "Devoxx Greece at the Athens Concert Hall with 1,500+ attendees from 30 countries and 85+ speakers. Voxxed Days Thessaloniki turns ten"
+events:
+  - name: "Devoxx Greece"
+    url: "https://devoxx.gr"
+    description: "The national developer conference, three days every spring at the Athens Concert Hall."
+  - name: "Voxxed Days Thessaloniki"
+    url: "https://voxxeddays.com/thessaloniki/"
+    description: "Where it all started. The tenth edition is on 20 and 21 November 2026 at the Ioannis Vellidis Congress Center."

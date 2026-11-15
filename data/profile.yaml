@@ -1,0 +1,54 @@
+# The hero, the numbers row, the README block and the contact band.
+# Fields ending in _html may contain links and other inline HTML.
+brand: "~/pat-papapetrou"
+app_name: "pat-papapetrou"
+name: "Patroklos (Pat) Papapetrou"
+location: "Thessaloniki, Greece"
+photo: "pat-photo.png"
+photo_alt: "Patroklos Papapetrou speaking on stage"
+headline: "I keep software and communities in sync."
+lede_html: >-
+  I'm Patroklos (Pat) Papapetrou. I maintain Argo CD at Octopus Deploy, I organize
+  <a href="https://devoxx.gr">Devoxx Greece</a> and the
+  <a href="https://voxxeddays.com/thessaloniki/">Voxxed Days</a> conferences, and I'm building rolelens.ai.
+cta_label: "$ invite pat --to your-conference"
+github_url: "https://github.com/ppapapetrou76"
+last_sync: "Voxxed Days Thessaloniki, 20 and 21 Nov 2026"
+credentials:
+  - "Argo Project member"
+  - "Devoxx Greece organizer"
+  - "Manning and Packt author"
+metrics:
+  - key: "years_writing_software"
+    value: "25+"
+  - key: "devoxx_greece_2026_attendees"
+    value: "1,500+"
+  - key: "voxxed_thessaloniki_years"
+    value: "10"
+  - key: "books_published"
+    value: "2"
+readme_html: >-
+  I've been writing software for more than 25 years<sup>1</sup>, for Greek and international companies,
+  and remotely since 2013. I tried engineering management for a year and came back to writing
+  code<sup>2</sup>. I call myself a software gardener<sup>3</sup>, because a codebase needs the same
+  daily care a garden does. I live in Thessaloniki<sup>4</sup>.
+readme_notes:
+  - "Lead Open Source Engineer at Octopus Deploy today, Principal Software Engineer at Elastic before that."
+  - "It's the part of the job I like most."
+  - "From my talk, The Art of Software Gardening."
+  - "Where I started the local Java meetup and later the conferences that grew out of it."
+contact:
+  title: "Want me at your conference or meetup?"
+  text: >-
+    Send me a message on LinkedIn with the event, the dates and the topic you have in mind, and I'll
+    get back to you. The same goes for anything about Argo CD, the conferences or rolelens.ai.
+  primary:
+    label: "Message me on LinkedIn"
+    url: "https://www.linkedin.com/in/ppapapetrou"
+  links:
+    - label: "GitHub"
+      url: "https://github.com/ppapapetrou76"
+    - label: "@softwaregarden on X"
+      url: "https://twitter.com/softwaregarden"
+    - label: "Sessionize"
+      url: "https://sessionize.com/pat/"

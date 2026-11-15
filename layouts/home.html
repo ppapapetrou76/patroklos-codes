@@ -1,0 +1,220 @@
+{{- $p := hugo.Data.profile -}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ site.Title }}</title>
+<meta name="description" content="{{ site.Params.description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800&family=Red+Hat+Text:wght@400;500;600;700&family=Red+Hat+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">{{ $p.brand }}</a>
+    <nav aria-label="Sections">
+      <ul>
+        <li><a href="#talks">talks</a></li>
+        <li><a href="#open-source">open-source</a></li>
+        <li><a href="#conferences">conferences</a></li>
+        <li><a href="#podcast">podcast</a></li>
+        <li><a href="#books">books</a></li>
+        <li><a href="#founder">founder</a></li>
+        <li><a href="#press">press</a></li>
+        <li><a href="#about">about</a></li>
+        <li><button class="theme" id="theme" type="button" aria-label="Switch between light and dark theme"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path></svg></button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-text">
+      <div class="status"><b>app: {{ $p.app_name }}</b><span class="chip">Synced</span><span class="chip">Healthy</span></div>
+      <h1>{{ $p.headline }}</h1>
+      <p class="lede">{{ $p.lede_html | safeHTML }}</p>
+      <div class="actions">
+        <a class="btn primary" href="#contact">{{ $p.cta_label }}</a>
+        <a class="btn" href="{{ $p.github_url }}">View source on GitHub</a>
+      </div>
+      <p class="sync">Last sync: {{ $p.last_sync }}</p>
+    </div>
+    <div class="me">
+      <div class="me-card">
+        <div class="me-head"><b>{{ $p.name }}</b><span class="muted">{{ $p.location }}</span></div>
+        <div class="me-photo"><img src="{{ $p.photo | relURL }}" alt="{{ $p.photo_alt }}" width="560" height="560"></div>
+      </div>
+      <ul class="creds" aria-label="Credentials">
+        {{- range $p.credentials }}
+        <li>{{ . }}</li>
+        {{- end }}
+      </ul>
+    </div>
+  </div>
+
+  <div class="metrics" aria-label="Numbers">
+    {{- range $p.metrics }}
+    <div class="metric"><span>{{ .key }}</span><b>{{ .value }}</b></div>
+    {{- end }}
+  </div>
+
+  <div class="tree-head">
+    <div>
+      <h2>Resource tree</h2>
+      <p class="muted">Everything I do, as one application. Select a node to open it.</p>
+    </div>
+    <button class="toggle-all" id="toggle-all" type="button">Expand all</button>
+  </div>
+
+  <div class="root">{{ $p.app_name }}<span class="chip">Healthy</span></div>
+
+  <div class="tree">
+
+    {{- /* Talks */ -}}
+    {{ $d := hugo.Data.talks }}
+    {{ partial "node-open.html" (dict "id" "talks" "section" $d.section) }}
+      <p>{{ $d.intro }}</p>
+      <div class="rows">
+        {{- range $d.items }}
+        <div class="row"><span class="y">{{ .year }}</span><span class="t">{{ .title }}<span class="e">{{ .event }}</span>{{ with .tags }}<span class="tags">{{ range . }}<span>{{ . }}</span>{{ end }}</span>{{ end }}</span>{{ if .link }}<span class="l"><a href="{{ .link }}">{{ .link_label | default "Link" }}</a></span>{{ end }}</div>
+        {{- end }}
+      </div>
+      {{ with $d.outro_html }}<p class="muted">{{ . | safeHTML }}</p>{{ end }}
+    {{ partial "node-close.html" . }}
+
+    {{- /* Open source */ -}}
+    {{ $d = hugo.Data.opensource }}
+    {{ partial "node-open.html" (dict "id" "open-source" "section" $d.section) }}
+      <p>{{ $d.intro_html | safeHTML }}</p>
+      <ul class="plain">
+        {{- range $d.highlights_html }}
+        <li>{{ . | safeHTML }}</li>
+        {{- end }}
+      </ul>
+      {{ with hugo.Data.auto.argocd_prs }}
+      <div>
+        <h4 class="mini">{{ $d.recent_title }}</h4>
+        <ul class="links">
+          {{- range . }}
+          <li><a href="{{ .url }}">{{ .title }}</a><span>#{{ .number }}, merged {{ .merged }}</span></li>
+          {{- end }}
+        </ul>
+      </div>
+      {{ end }}
+      <div class="grid2">
+        {{- range $d.projects }}
+        <div class="tile"><h4><a href="{{ .url }}">{{ .name }}</a></h4><p>{{ .description }}</p></div>
+        {{- end }}
+      </div>
+    {{ partial "node-close.html" . }}
+
+    {{- /* Conferences */ -}}
+    {{ $d = hugo.Data.conferences }}
+    {{ partial "node-open.html" (dict "id" "conferences" "section" $d.section) }}
+      <p>{{ $d.intro }}</p>
+      <div class="term">
+        <div class="cmd">{{ $d.command }}</div>
+        <dl>
+          <dt class="h">REV</dt><dd class="h">CHANGE</dd>
+          {{- range $d.history }}
+          <dt>{{ .year }}</dt><dd>{{ .text }}</dd>
+          {{- end }}
+        </dl>
+      </div>
+      <div class="grid2">
+        {{- range $d.events }}
+        <div class="tile"><h4><a href="{{ .url }}">{{ .name }}</a></h4><p>{{ .description }}</p></div>
+        {{- end }}
+      </div>
+    {{ partial "node-close.html" . }}
+
+    {{- /* Podcast */ -}}
+    {{ $d = hugo.Data.podcast }}
+    {{ partial "node-open.html" (dict "id" "podcast" "section" $d.section) }}
+      <p>{{ $d.intro }}</p>
+      <div class="grid2">
+        {{- range sort hugo.Data.auto.episodes "number" "desc" }}
+        {{- $extra := index $d.episodes .id | default dict }}
+        <div class="tile"><span class="st">Episode {{ .number }}</span><h4><a href="{{ .url }}">{{ $extra.title | default .title }}</a></h4>{{ with $extra.description }}<p>{{ . }}</p>{{ end }}</div>
+        {{- end }}
+      </div>
+      <p><a href="{{ $d.youtube }}">Watch all episodes on the Main Branch YouTube channel</a> or <a href="{{ $d.spotify }}">listen on Spotify</a>.</p>
+    {{ partial "node-close.html" . }}
+
+    {{- /* Books and writing */ -}}
+    {{ $d = hugo.Data.writing }}
+    {{ partial "node-open.html" (dict "id" "books" "section" $d.section) }}
+      <div class="grid2">
+        {{- range $d.books }}
+        <div class="tile"><span class="st">{{ .publisher }}</span><h4><a href="{{ .url }}">{{ .title }}</a></h4><p>{{ .description }}</p></div>
+        {{- end }}
+      </div>
+      <ul class="links">
+        {{- range $d.articles }}
+        <li><a href="{{ .url }}">{{ .title }}</a><span>{{ .source }}</span></li>
+        {{- end }}
+      </ul>
+    {{ partial "node-close.html" . }}
+
+    {{- /* Founder */ -}}
+    {{ $d = hugo.Data.founder }}
+    {{ partial "node-open.html" (dict "id" "founder" "section" $d.section) }}
+      <p>{{ $d.intro }}</p>
+      <div class="grid2">
+        {{- range $d.items }}
+        <div class="tile"><span class="st{{ if .warn }} warn{{ end }}">{{ .status }}</span><h4>{{ with .url }}<a href="{{ . }}">{{ end }}{{ .name }}{{ if .url }}</a>{{ end }}</h4><p>{{ .description }}</p></div>
+        {{- end }}
+      </div>
+    {{ partial "node-close.html" . }}
+
+    {{- /* Interviews */ -}}
+    {{ $d = hugo.Data.interviews }}
+    {{ partial "node-open.html" (dict "id" "press" "section" $d.section) }}
+      <ul class="links">
+        {{- range $d.items }}
+        <li><a href="{{ .url }}">{{ .title }}</a><span>{{ .source }}</span></li>
+        {{- end }}
+      </ul>
+    {{ partial "node-close.html" . }}
+
+  </div>
+
+  <section class="readme" id="about" aria-label="About">
+    <div class="main">
+      <span class="file">README.md</span>
+      <p>{{ $p.readme_html | safeHTML }}</p>
+    </div>
+    <ol class="notes">
+      {{- range $i, $n := $p.readme_notes }}
+      <li><b>{{ add $i 1 }}</b>{{ $n }}</li>
+      {{- end }}
+    </ol>
+  </section>
+
+</div>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>{{ $p.contact.title }}</h2>
+    <p>{{ $p.contact.text }}</p>
+    <div class="actions">
+      <a class="btn go" href="{{ $p.contact.primary.url }}">{{ $p.contact.primary.label }}</a>
+      {{- range $p.contact.links }}
+      <a class="btn" href="{{ .url }}">{{ .label }}</a>
+      {{- end }}
+    </div>
+    <div class="foot">{{ $p.location }}</div>
+  </div>
+</section>
+</main>
+
+<script src="{{ "js/site.js" | relURL }}"></script>
+</body>
+</html>
