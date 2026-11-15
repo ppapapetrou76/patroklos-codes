@@ -1,0 +1,9 @@
+// Cloudflare Workers config: serve the folder Hugo builds as static files.
+{
+  "name": "patroklos-codes",
+  "compatibility_date": "2026-11-15",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "auto-trailing-slash"
+  }
+}

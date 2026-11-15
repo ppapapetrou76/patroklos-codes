@@ -1,7 +1,7 @@
 # pat-papapetrou
 
 My personal site at https://patroklos.codes. It is one page built with [Hugo](https://gohugo.io)
-from the data files in `data/`, and Cloudflare Pages builds and publishes it on every push to `main`.
+from the data files in `data/`, and Cloudflare builds and publishes it on every push to `main`.
 
 ## Run it locally
 
@@ -62,12 +62,12 @@ it, and Cloudflare rebuilds the site because of the push.
 
 ## Hosting
 
-The site is a Cloudflare Pages project connected to this repository. The build settings are:
+The site is a Cloudflare Workers project connected to this repository. `wrangler.jsonc` tells it to serve the `public` folder. The build settings are:
 
 | Setting | Value |
 |---|---|
 | Build command | `hugo build --gc --minify` |
-| Build output directory | `public` |
+| Deploy command | `npx wrangler deploy` |
 | Environment variable | `HUGO_VERSION` = `0.170.0` |
 
 The daily update needs to commit, so in Settings, Actions, General, workflows are allowed to read
